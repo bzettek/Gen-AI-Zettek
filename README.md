@@ -46,7 +46,7 @@ The flow follows a resident I am calling Margaret in Room 214. She asks for some
 
 1. **I fixed answers to "Which one did you mean?"** Before, saying "the shark one" or "the pirate one" always played Titanic, because the word "one" was read as "number one." Now description words win, and numbers only count when they clearly mean a position, such as "number 2" or "the first one."
 2. **I improved how it handles requests it cannot play.** Before, "Put on Bonanza" got the same generic "not sure" screen as "Turn the heat up." Now it says, "I heard Bonanza. It isn't on Room 214's services right now," and offers a couple of shows she does have. On any miss, it repeats back what it heard so she knows it understood her words. The suggestions can also be tapped now.
-3. **I gave the resident control back, which is my risk response.** Every result now has a "Not that one?" button, and she can also say "not that one." This stops playback and offers the other close matches. If a match is weak, it asks "Did you mean Jaws?" instead of playing on its own. I also removed the made-up confidence number, which showed 0.95 even when the result was wrong, and the staff alert now clearly says it is a demo and nothing was sent.
+3. **I gave the resident control back, which is my risk response.** Every result now has a "Not that one?" button, and she can also say "not that one." This stops playback and offers the other close matches. If a match is weak, it asks "Did you mean Jaws?" instead of playing on its own. I also removed the made-up confidence number, which showed 0.95 even when the result was wrong, and the staff alert now clearly says it is a demo and nothing was sent. When AI recommended adding a live API came up, I chose not to implement it right away. I wanted to make sure the flow and the way residents would use it were right before adding a real model, so the AI stays simulated this round.
 
 ## Peer feedback and how I used it
 
@@ -103,7 +103,7 @@ The video is shared with view access for Emelia Hughes and Samuel Huang.
 
 I used Claude (Anthropic) throughout this project. Claude wrote most of the code (index.html, style.css, app.js, and catalog.js), ran the browser tests listed above, and helped with this README. It also helped me find the statistics for my one-pager and built the concept video and one-pager graphics.
 
-My own judgment drove the product decisions. The idea and the target user came from me, along with keeping every streaming service signed in on the cloud so switching is fast, using deep links to open content instantly, using an always-on mic instead of a remote, and the FlowTV name. I also decided which peer feedback to act on and what to defer to the final project. When adding a live API came up, I chose not to implement it right away. I wanted to make sure the flow and the way residents would use it were right before adding a real model, so the AI stays simulated this round. I reviewed each result against the experience I wanted and asked for changes when it did not match.
+My own judgment drove the product decisions. The idea and the target user came from me, along with keeping every streaming service signed in on the cloud so switching is fast, using deep links to open content instantly, using an always-on mic instead of a remote, and the FlowTV name. I also decided which peer feedback to act on and what to defer to the final project. I reviewed each result against the experience I wanted and asked for changes when it did not match.
 
 ## Files
 
